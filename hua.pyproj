@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>hua</Name>
+    <RootNamespace>hua</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>0f161f65-abbb-4e44-92e1-a12eb51f748e</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>hua.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="fabfile.py" />
+    <Compile Include="hua\local_settings.py" />
+    <Compile Include="hua\settings.py" />
+    <Compile Include="hua\urls.py" />
+    <Compile Include="hua\wsgi.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="deploy\crontab.template" />
+    <Content Include="deploy\gunicorn.conf.py.template" />
+    <Content Include="deploy\local_settings.py.template" />
+    <Content Include="deploy\nginx.conf.template" />
+    <Content Include="deploy\supervisor.conf.template" />
+    <Content Include="README.md" />
+    <Content Include="requirements.txt" />
+    <Content Include="static\media\uploads\gallery\Amsterdam, Holland.jpg" />
+    <Content Include="static\media\uploads\gallery\Asturias, Brazil.jpg" />
+    <Content Include="static\media\uploads\gallery\Athens, Greece.jpg" />
+    <Content Include="static\media\uploads\gallery\Austin, USA.jpg" />
+    <Content Include="static\media\uploads\gallery\Ávila, Spain.jpg" />
+    <Content Include="static\media\uploads\gallery\Bangkok, Thailand.jpg" />
+    <Content Include="static\media\uploads\gallery\Berlin, Germany.jpg" />
+    <Content Include="static\media\uploads\gallery\Boston, USA.jpg" />
+    <Content Include="static\media\uploads\gallery\Brisbane, Australia.jpg" />
+    <Content Include="static\media\uploads\gallery\Bruxelles, Belgium.jpg" />
+    <Content Include="static\media\uploads\gallery\Buenos Aires, Argentina.jpg" />
+    <Content Include="static\media\uploads\gallery\Cairo, Egypt.jpg" />
+    <Content Include="static\media\uploads\gallery\Chicage, USA.jpg" />
+    <Content Include="static\media\uploads\gallery\City of Singapore, Singapore.jpg" />
+    <Content Include="static\media\uploads\gallery\Dallas, USA.jpg" />
+    <Content Include="static\media\uploads\gallery\Denver, USA.jpg" />
+    <Content Include="static\media\uploads\gallery\Dublin, Ireland.jpg" />
+    <Content Include="static\media\uploads\gallery\Düsseldorf, Germany.jpg" />
+    <Content Include="static\media\uploads\gallery\Frankfurt, Germany.jpg" />
+    <Content Include="static\media\uploads\gallery\Geneva, Switzerland.jpg" />
+    <Content Include="static\media\uploads\gallery\Inverness, Scotland.jpg" />
+    <Content Include="static\media\uploads\gallery\Lisbon, Portugal.jpg" />
+    <Content Include="static\media\uploads\gallery\Liverpool, England.jpg" />
+    <Content Include="static\media\uploads\gallery\London, England.jpg" />
+    <Content Include="static\media\uploads\gallery\Long Beach, USA.jpg" />
+    <Content Include="static\media\uploads\gallery\Louisville, USA.jpg" />
+    <Content Include="static\media\uploads\gallery\Marrakech, Morocco.jpg" />
+    <Content Include="static\media\uploads\gallery\Miami, USA.jpg" />
+    <Content Include="static\media\uploads\gallery\Monaco, Monaco.jpg" />
+    <Content Include="static\media\uploads\gallery\Moscow, Russia.jpg" />
+    <Content Include="static\media\uploads\gallery\Naples, Italy.jpg" />
+    <Content Include="static\media\uploads\gallery\Palermo, Italy.jpg" />
+    <Content Include="static\media\uploads\gallery\Paris, France.jpg" />
+    <Content Include="static\media\uploads\gallery\Reykjavik, Iceland.jpg" />
+    <Content Include="static\media\uploads\gallery\Rome, Italy.jpg" />
+    <Content Include="static\media\uploads\gallery\San Francisco, USA.jpg" />
+    <Content Include="static\media\uploads\gallery\Santiago, Chile.jpg" />
+    <Content Include="static\media\uploads\gallery\Seattle, USA.jpg" />
+    <Content Include="static\media\uploads\gallery\Stockholm, Sweden.jpg" />
+    <Content Include="static\media\uploads\gallery\Sydney, Australia.jpg" />
+    <Content Include="static\media\uploads\gallery\Tempe Town Lake, USA.jpg" />
+    <Content Include="static\media\uploads\gallery\Tokyo, Japan.jpg" />
+    <Content Include="static\media\uploads\gallery\Toronto, Canada.jpg" />
+    <Content Include="static\media\uploads\gallery\Vancouver, Canada.jpg" />
+    <Content Include="static\media\uploads\gallery\Venice, Italy.jpg" />
+    <Content Include="static\media\uploads\gallery\Vienna, Austria.jpg" />
+    <Content Include="static\media\uploads\gallery\Warsaw, Poland.jpg" />
+    <Content Include="static\media\uploads\gallery\Yokohama, Japan.jpg" />
+    <Content Include="static\media\uploads\gallery\York, England.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="deploy\" />
+    <Folder Include="hua\" />
+    <Folder Include="static\" />
+    <Folder Include="static\media\" />
+    <Folder Include="static\media\uploads\" />
+    <Folder Include="static\media\uploads\gallery\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

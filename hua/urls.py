@@ -7,6 +7,8 @@ from django.views.i18n import set_language
 
 from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
+import mezzanine_pagedown.urls
+import mezzanine.blog.views
 
 # Uncomment to use blog as home page. See also urlpatterns section below.
 # from mezzanine.blog import views as blog_views
@@ -39,7 +41,7 @@ urlpatterns += [
     # one homepage pattern, so if you use a different one, comment this
     # one out.
 
-    url("^$", direct_to_template, {"template": "index.html"}, name="home"),
+    #url("^$", direct_to_template, {"template": "index.html"}, name="home"),
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
@@ -66,7 +68,7 @@ urlpatterns += [
     # page tree in the admin if it was installed.
     # NOTE: Don't forget to import the view function too!
 
-    # url("^$", blog_views.blog_post_list, name="home"),
+    url("^$", mezzanine.blog.views.blog_post_list, name="home"),
 
     # MEZZANINE'S URLS
     # ----------------
@@ -79,6 +81,7 @@ urlpatterns += [
     # ``mezzanine.urls``, go right ahead and take the parts you want
     # from it, and use them directly below instead of using
     # ``mezzanine.urls``.
+    url("^pagedown/", include(mezzanine_pagedown.urls)),
     url("^", include("mezzanine.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX

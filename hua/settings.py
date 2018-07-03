@@ -234,6 +234,7 @@ if DJANGO_VERSION < (1, 9):
 ################
 
 INSTALLED_APPS = (
+    "mezzanine_pagedown",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -340,3 +341,17 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+#####################
+# PAGEDOWN SETTINGS #
+#####################
+RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
+RICHTEXT_FILTERS = ['mezzanine_pagedown.filters.codehilite',]
+PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra','codehilite','toc')
+RICHTEXT_FILTER_LEVEL = 3  # 防止站点把>当作错误。
+PAGEDOWN_SERVER_SIDE_PREVIEW = False # markdown应该是Client来Render的。
+
+#####################
+# UI SETTINGS #
+#####################
+SEARCH_MODEL_CHOICES = []
